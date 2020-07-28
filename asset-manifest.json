@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.css": "/solid-family-tree-example/static/css/main.a38d5c33.chunk.css",
+    "main.js": "/solid-family-tree-example/static/js/main.ed96749b.chunk.js",
+    "runtime~main.js": "/solid-family-tree-example/static/js/runtime~main.8c05c858.js",
+    "static/js/2.9c4e9afc.chunk.js": "/solid-family-tree-example/static/js/2.9c4e9afc.chunk.js",
+    "index.html": "/solid-family-tree-example/index.html",
+    "precache-manifest.fa139fbad674636a17f8b196bccaf166.js": "/solid-family-tree-example/precache-manifest.fa139fbad674636a17f8b196bccaf166.js",
+    "service-worker.js": "/solid-family-tree-example/service-worker.js"
+  }
+}
