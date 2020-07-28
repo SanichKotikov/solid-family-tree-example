@@ -8,6 +8,6 @@ but uses [solid-js](https://github.com/ryansolid/solid) instead of React.
 * Solid ~11 kB
 * React ~48 kB
 
-## Modules
+#### Modules
 
 * [relatives-tree](https://www.npmjs.com/package/relatives-tree)
