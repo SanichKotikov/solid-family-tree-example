@@ -5,9 +5,10 @@ but uses [solid-js](https://github.com/ryansolid/solid) instead of React.
 
 #### Bundle sizes (gzip)
 
-* Solid ~11 kB
-* React ~48 kB
+* Solid: ~12 kB
+* React: ~47 kB
 
 #### Modules
 
+* [pinch-zoom-pan](https://www.npmjs.com/package/pinch-zoom-pan)
 * [relatives-tree](https://www.npmjs.com/package/relatives-tree)
