@@ -1,4 +1,4 @@
-import { createEffect, createState } from 'solid-js';
+import { createRenderEffect, createState } from 'solid-js';
 import { For } from 'solid-js/dom';
 import calcTree from 'relatives-tree';
 import { IFamilyData, IFamilyNode } from 'relatives-tree/lib/types';
@@ -26,7 +26,7 @@ function Tree(props: IProps) {
 
   const [state, setState] = createState<IState>({} as any);
 
-  createEffect(() => {
+  createRenderEffect(() => {
     setState({
       tree: calcTree(props.nodes, {
         rootId: props.rootId,
