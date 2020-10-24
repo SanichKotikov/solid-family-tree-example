@@ -1,15 +1,11 @@
-import { createComputed, createState } from 'solid-js';
+import { createMemo } from 'solid-js';
 import { For } from 'solid-js/dom';
 import calcTree from 'relatives-tree';
-import { IFamilyData, IFamilyNode } from 'relatives-tree/lib/types';
+import { IFamilyNode } from 'relatives-tree/lib/types';
 import Connector from '../Connector/Connector';
 import Node from '../Node/Node';
 
 import css from './Tree.module.css';
-
-interface IState {
-  tree: IFamilyData;
-}
 
 interface IProps {
   rootId: string;
@@ -24,30 +20,26 @@ function Tree(props: IProps) {
   const width = props.width / 2;
   const height = props.height / 2;
 
-  const [state, setState] = createState<IState>({} as any);
-
-  createComputed(() => {
-    setState({
-      tree: calcTree(props.nodes, {
-        rootId: props.rootId,
-        placeholders: props.placeholders,
-      }),
-    });
-  });
+  const tree = createMemo(() =>
+    calcTree(props.nodes, {
+      rootId: props.rootId,
+      placeholders: props.placeholders,
+    }),
+  );
 
   return (
     <div
       class={css.root}
       style={{
         position: 'relative',
-        width: `${state.tree.canvas.width * width}px`,
-        height: `${state.tree.canvas.height * height}px`,
+        width: `${tree().canvas.width * width}px`,
+        height: `${tree().canvas.height * height}px`,
       }}
     >
-      <For each={[...state.tree.connectors]}>
+      <For each={[...tree().connectors]}>
         {(connector) => <Connector connector={connector} width={width} height={height} />}
       </For>
-      <For each={[...state.tree.nodes]}>
+      <For each={[...tree().nodes]}>
         {(node) => (
           <Node
             isRoot={node.id === props.rootId}
