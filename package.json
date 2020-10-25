@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "pinch-zoom-pan": "3.0.0",
-    "relatives-tree": "2.0.2",
-    "solid-js": "0.21.1"
+    "relatives-tree": "2.1.0",
+    "solid-js": "0.21.2"
   },
   "scripts": {
     "start": "solid-scripts start",

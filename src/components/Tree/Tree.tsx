@@ -36,10 +36,10 @@ function Tree(props: IProps) {
         height: `${tree().canvas.height * height}px`,
       }}
     >
-      <For each={[...tree().connectors]}>
+      <For each={tree().connectors}>
         {(connector) => <Connector connector={connector} width={width} height={height} />}
       </For>
-      <For each={[...tree().nodes]}>
+      <For each={tree().nodes}>
         {(node) => (
           <Node
             isRoot={node.id === props.rootId}
