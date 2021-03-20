@@ -1,4 +1,5 @@
-import { Show } from 'solid-js/dom';
+import { JSX } from 'solid-js';
+import { Show } from 'solid-js/web';
 import { ExtNode } from 'relatives-tree/lib/types';
 
 import css from './Node.module.css';

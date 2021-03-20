@@ -1,5 +1,5 @@
 import { createSignal } from 'solid-js';
-import { Show } from 'solid-js/dom';
+import { Show } from 'solid-js/web';
 import { Node } from 'relatives-tree/lib/types';
 import nodes from 'relatives-tree/samples/average-tree.json';
 import PinchZoomPan from '../PinchZoomPan/PinchZoomPan';

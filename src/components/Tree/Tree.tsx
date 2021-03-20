@@ -1,5 +1,5 @@
 import { createMemo } from 'solid-js';
-import { For } from 'solid-js/dom';
+import { For } from 'solid-js/web';
 import calcTree from 'relatives-tree';
 import { Node as TreeNode } from 'relatives-tree/lib/types';
 import Connector from '../Connector/Connector';

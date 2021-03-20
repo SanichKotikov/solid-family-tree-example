@@ -1,4 +1,4 @@
-import { onCleanup } from 'solid-js';
+import { JSX, onCleanup } from 'solid-js';
 import { create } from 'pinch-zoom-pan';
 
 import css from './PinchZoomPan.module.css';
