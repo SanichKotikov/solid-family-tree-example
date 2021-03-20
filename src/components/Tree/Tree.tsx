@@ -1,7 +1,7 @@
 import { createMemo } from 'solid-js';
 import { For } from 'solid-js/dom';
 import calcTree from 'relatives-tree';
-import { IFamilyNode } from 'relatives-tree/lib/types';
+import { Node as TreeNode } from 'relatives-tree/lib/types';
 import Connector from '../Connector/Connector';
 import Node from '../Node/Node';
 
@@ -9,7 +9,7 @@ import css from './Tree.module.css';
 
 interface IProps {
   rootId: string;
-  nodes: ReadonlyArray<IFamilyNode>;
+  nodes: ReadonlyArray<TreeNode>;
   width: number;
   height: number;
   placeholders?: boolean;

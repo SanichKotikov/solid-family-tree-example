@@ -1,11 +1,11 @@
 import { Show } from 'solid-js/dom';
-import { IFamilyExtNode } from 'relatives-tree/lib/types';
+import { ExtNode } from 'relatives-tree/lib/types';
 
 import css from './Node.module.css';
 
 interface IProps {
   isRoot: boolean;
-  node: IFamilyExtNode;
+  node: ExtNode;
   style?: JSX.CSSProperties;
   onSubClick: (id: string) => void;
 }

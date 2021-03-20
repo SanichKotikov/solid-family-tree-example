@@ -1,6 +1,6 @@
 import { createSignal } from 'solid-js';
 import { Show } from 'solid-js/dom';
-import { IFamilyNode } from 'relatives-tree/lib/types';
+import { Node } from 'relatives-tree/lib/types';
 import nodes from 'relatives-tree/samples/average-tree.json';
 import PinchZoomPan from '../PinchZoomPan/PinchZoomPan';
 import Tree from '../Tree/Tree';
@@ -33,7 +33,7 @@ function App() {
         class={css.wrapper}
       >
         <Tree
-          nodes={nodes as IFamilyNode[]}
+          nodes={nodes as Node[]}
           rootId={rootId()}
           width={WIDTH}
           height={HEIGHT}

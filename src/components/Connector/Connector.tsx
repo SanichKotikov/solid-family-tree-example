@@ -1,9 +1,9 @@
-import { IConnector } from 'relatives-tree/lib/types';
+import { Connector as TreeConnector } from 'relatives-tree/lib/types';
 
 const MIN_THICKNESS = 1;
 
 interface IProps {
-  connector: IConnector;
+  connector: TreeConnector;
   width: number;
   height: number;
   thickness?: number;
@@ -14,7 +14,7 @@ function calcSide(size: number, factor: number, thickness: number): number {
 }
 
 function Connector({ connector, width, height, thickness = MIN_THICKNESS }: IProps) {
-  const [x1, y1, x2, y2] = connector.points;
+  const [x1, y1, x2, y2] = connector;
 
   return (
     <i
